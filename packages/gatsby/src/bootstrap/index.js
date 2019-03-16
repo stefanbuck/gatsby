@@ -1,21 +1,22 @@
 /* @flow */
 
-const _ = require(`lodash`)
-const slash = require(`slash`)
-const fs = require(`fs-extra`)
-const md5File = require(`md5-file/promise`)
-const crypto = require(`crypto`)
-const del = require(`del`)
+const fs = require(`fs`)
 const path = require(`path`)
-const convertHrtime = require(`convert-hrtime`)
-const Promise = require(`bluebird`)
 
-const apiRunnerNode = require(`../utils/api-runner-node`)
-const getBrowserslist = require(`../utils/browserslist`)
+const del = require(`del`)
+const crypto = require(`crypto`)
+const Promise = require(`bluebird`)
 const { graphql } = require(`graphql`)
-const { store, emitter } = require(`../redux`)
+
 const loadPlugins = require(`./load-plugins`)
 const loadThemes = require(`./load-themes`)
+const apiRunnerNode = require(`../utils/api-runner-node`)
+const getBrowserslist = require(`../utils/browserslist`)
+
+
+
+const { store, emitter } = require(`../redux`)
+
 const report = require(`gatsby-cli/lib/reporter`)
 const getConfigFile = require(`./get-config-file`)
 const tracer = require(`opentracing`).globalTracer()
