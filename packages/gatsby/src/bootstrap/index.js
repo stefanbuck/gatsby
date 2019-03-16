@@ -1,16 +1,14 @@
-/* @flow */
+
 
 const fs = require(`fs`)
 const path = require(`path`)
-
 const del = require(`del`)
 const crypto = require(`crypto`)
 const Promise = require(`bluebird`)
 const { graphql } = require(`graphql`)
 
-const loadPlugins = require(`./load-plugins`)
-const loadThemes = require(`./load-themes`)
-const apiRunnerNode = require(`../utils/api-runner-node`)
+const plugins = require(`./load-plugins`)
+const themes = require(`./load-themes`)
 const getBrowserslist = require(`../utils/browserslist`)
 
 
